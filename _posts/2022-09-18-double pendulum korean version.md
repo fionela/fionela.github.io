@@ -24,7 +24,8 @@ scene.background=color.white
 ## 시뮬레이션에 필요한 물체들 만들기
 ##### 공 두개와 공들을 잇는 실린더가 있습니다
 ```python
-ball = sphere(pos=vector(0,0,0), radius=0.15, color=color.blue, opacity=0.8)
+ball = sphere(pos=vector(0,0,0), radius=0.15, color=color.blue, \
+  opacity=0.8)
 base = box(pos=vector(0,-2.5,-1), size=vector(2,0.1,2))
 wall = box(pos=vector(0,-1,-1), size=vector(0.1,3,0.1))
 bar = cylinder(pos=vector(0,0,-1), radius=0.05,\
@@ -67,7 +68,8 @@ while True:
     
 
         alpha = (-g*(2*m+m)*sin(theta1)-m*g*sin(theta1-2*theta2)-\
-          2*sin(theta1-theta2)*m*(r*omega1**2+r*cos(theta1-theta2)*omega**2))\
+          2*sin(theta1-theta2)*m*(r*omega1**2+r*cos(theta1-theta2)\
+           *omega**2))\
           /(r*(2*m+m-m*cos(2*theta1-2*theta2))) #ball 1의 각가속도
         omega += alpha*dt #ball 1 의 각속도
         theta1 += omega*dt # ball 1의 각
